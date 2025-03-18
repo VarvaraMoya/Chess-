@@ -263,13 +263,13 @@ class HexChessBoard:
 
     def display(self):
         """Display the current state of the hexagonal chess board."""
-        print("    A  B  C  D  E  F  G  H  I  J  K")
+        print("    A B C D E F G H I J K")
         for i in range(11):
             row = str(11 - i).rjust(2) + " "
             for j in range(11):
                 row += (str(self.board[i][j]) if self.board[i][j] else '.') + ' '
             print(row + str(11 - i).rjust(2))
-        print("    A  B  C  D  E  F  G  H  I  J  K")
+        print("    A B C D E F G H I J K")
 
     def move_piece(self, start, end):
         """Move a piece from start to end position if valid.
